@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "BeerRegular";
+    src: url("../fonts/BeerRegular/BeerRegular.eot");
+    src: url("../fonts/BeerRegular/BeerRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/BeerRegular/BeerRegular.woff") format("woff"),
+    url("../fonts/BeerRegular/BeerRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

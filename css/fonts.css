@@ -1,0 +1,8 @@
+@font-face{
+    font-family:"LetterGothicStd";
+    src:url(../fonts/LetterGothicStd/lettergothicstd.otf);
+}
+@font-face{
+    font-family:"LetterGothicStd-bold";
+    src:url(../fonts/LetterGothicStd/lettergothicstd-bold.otf);
+}

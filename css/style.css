@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans serif;
+    line-height: 1.5;
+    background: #000000;
+    background: -webkit-linear-gradient(left, #000000, #01BBFF);
+    background: -moz-linear-gradient(left, #000000, #01BBFF);
+    background: linear-gradient(to right, #000000, #01BBFF);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a img {
+    border: none;
+    vertical-align: middle;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* HEADER SECTION */
+.header {
+    display: flex;
+    flex-wrap: wrap; /*перенос строки */
+    justify-content: space-between; /*прижимает содержимое к краям */
+    align-items: center; /*выравнивает элементы по центру на вертикальной */
+    border-bottom: 0;
+    border-radius: 7px 7px 0 0;
+    background-color: #fdf9f2;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+/*.header__logo {
+    margin-left: 30px;
+}*/
+
+/*.header__logo-image {
+    max-width: 60px;
+    width: 100%;
+}*/
+
+.header__menu {
+    width: 100%;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.header__item {
+    margin: 5px 10px;
+}
+
+.header__item-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #585656;
+}
+
+.block {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__contact {
+    width: 47%;
+}
+
+.header__social-block {
+    margin-right: 16px;
+    display: flex;
+    width: 100px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.header__social-link {
+    width: 100%;
+    font-size: 18px;
+}
+
+.header__phone {
+    font-size: 110%;
+    color: rgba(95, 88, 88, 0.7215686274509804);
+    padding-right: 40px;
+}
+
+.fa-telegram, .fa-vk, .fa-instagram{
+    color: #585656;
+}
+
+/* CONTENT SECTION */
+.content {
+    flex: 1 0 auto;
+    padding: 20px 20px 40px;
+    background-color: #00000042;
+    border: 1px solid #fdf9f2;
+}
+
+.command__item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.commands__text {
+    color: #fff;
+    font-size: large;
+}
+
+.commands__user {
+    font-weight: bold;
+    color: tomato;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fade;
+    -webkit-animation: fade;
+    animation-delay: 3.7s;
+    animation-fill-mode: forwards;
+}
+
+.product__view {
+    width: 100%;
+    position: relative;
+    max-width: 210px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    box-shadow: -20px 25px 10px rgba(0,0,0,0.5);
+    height: 297px;
+    animation: liftDown 0.5s forwards ease-in-out;
+}
+
+.product__view:hover {
+    animation: liftIn 0.5s forwards ease-in-out;
+}
+
+.product__link {
+    font-size:  140%;
+}
+
+.product__view-image {
+    width: 100%;
+    height: 100%;
+}
+
+.product__action {
+    display: none;
+}
+
+.product__name, .product__action {
+    position: absolute;
+    top: 32%;
+    right: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+    background-color: #e1e405;
+    left: 0;
+}
+
+.product__link:hover .product__name {
+    display: none;
+}
+
+.product__link:hover .product__action {
+    display: inline;
+}
+
+/* FOOTER SECTION */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    padding: 20px;
+}
+
+.footer__copyrate, .footer__author {
+    color: #fff;
+}
+
+.footer__author {
+    text-decoration: none;
+}
+
+/*ANIMATION*/
+.text-typing, .text-typing2, .text-typing3 {
+    margin-left: 5px;
+    width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.text-typing2, .text-typing3 {
+    opacity: 0;
+    -webkit-animation: type2 5s forwards steps(50, end);
+    animation: type2 5s steps(50, end);
+    animation-fill-mode: forwards;
+}
+
+.text-typing {
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+.text-typing2
+{
+    animation-delay: 1.8s;
+}
+
+.text-typing3
+{
+    animation-delay: 3s;
+}
+
+.command__item_two {
+    opacity: 0;
+    animation: fade;
+    -webkit-animation: fade;
+    animation-delay: 1.6s;
+    animation-fill-mode: forwards;
+}
+
+.command__item_three {
+    opacity: 0;
+    animation: fade;
+    -webkit-animation: fade;
+    animation-delay: 2.7s;
+    animation-fill-mode: forwards;
+}
+
+.commands {
+    animation: hide;
+    -webkit-animation: hide;
+    animation-delay: 3.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 1;}
+}
+
+@keyframes hide {
+    from {opacity: 0;}
+    to {opacity: 0;}
+}
+
+@-webkit-keyframes hide {
+    from {opacity: 0;}
+    to {opacity: 0;}
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+@keyframes type2{
+    from { width: 0; opacity: 1}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes type2{
+    from { width: 0; opacity: 1}
+    to {opacity: 1}
+}
+
+@keyframes bone {
+    from { display: none!important; }
+    to { display: none!important; }
+}
+
+@-webkit-keyframes bone {
+    from { display: none!important; }
+    to { display: none!important; }
+}
+
+@keyframes liftIn {
+    from { margin-top: 0px; }
+    to { margin-top: -30px; }
+}
+
+@-webkit-keyframes liftIn {
+    from { margin-top: 0px; }
+    to { margin-top: -30px; }
+}
+
+@keyframes liftDown {
+    from { margin-top: -30px; }
+    to { margin-top: 0px; }
+}
+
+@-webkit-keyframes liftDown {
+    from { margin-top: -30px; }
+    to { margin-top: 0px; }
+}
