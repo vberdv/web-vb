@@ -2,7 +2,7 @@ body {
   color: #222; }
 
 a {
-  color: #8238A7; }
+  color: #b829ff; }
 
 p,
 body .main_footer,
@@ -82,8 +82,8 @@ section h3 {
   border-bottom: 1px solid #8238A7; }
 
 .portfolio_item .port_item_cont a {
-  border-color: #8238A7;
-  color: #8238A7; }
+  /*border-color: #8238A7;
+  color: #8238A7;*/ }
 
 .port_item_cont p {
   font-family: "BeerRegular";
@@ -92,11 +92,11 @@ section h3 {
 }
 
 .contact_box p{
-  color: #8238A7;
+  color: #b829ff;
 }  
 
 .main_footer a {
-  color: #8238A7; }
+  /*color: #8238A7;*/ }
 
 .contacts_icon {
   color: #8238A7; }
@@ -111,12 +111,12 @@ form input,
 form textarea {
   letter-spacing: 2px; }
 form button {
-  background-color: #8238A7;
+  background-color: #b829ff;
   letter-spacing: 2px; }
 form .form-group {
   letter-spacing: 2px;
   color: #888;
-  font-family: "BeerRegular";
+  font-family: initial;
   font-size: 18px; }
 
 .popup_content {

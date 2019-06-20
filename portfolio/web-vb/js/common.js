@@ -1,72 +1,88 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-	$("#portfolio_grid").mixItUp();
+    //*Новое видео
+    $(function () {
+        $(".player").mb_YTPlayer();
+    });
 
-	$(".s_portfolio li").click(function() {
-		$(".s_portfolio li").removeClass("active");
-		$(this).addClass("active");
-	});
+    $("#portfolio_grid").mixItUp();
 
-	$(".popup").magnificPopup({type:"image"});
-	$(".popup_content").magnificPopup({
-		type:"inline",
-		midClick: true
-	});
+    $(".s_portfolio li").click(function () {
+        $(".s_portfolio li").removeClass("active");
+        $(this).addClass("active");
+    });
 
-	//*Новое видео
-	$(function(){
-      $(".player").mb_YTPlayer();
-    });	
+    $(".popup").magnificPopup({type: "image"});
+    $(".popup_content").magnificPopup({
+        type: "inline",
+        midClick: true
+    });
 
-	$(".section_header").animated("fadeInUp", "fadeOutDown");
+    $(".section_header").animated("fadeInUp", "fadeOutDown");
 
-	$(".animation_1").animated("flipInY", "fadeOutDown");
-	$(".animation_2").animated("fadeInLeft", "fadeOutDown");
-	$(".animation_3").animated("fadeInRight", "fadeOutDown");	
+    $(".animation_1").animated("flipInY", "fadeOutDown");
+    $(".animation_2").animated("fadeInLeft", "fadeOutDown");
+    $(".animation_3").animated("fadeInRight", "fadeOutDown");
 
-	function heightDetect() {
-		$(".main_head").css("height", $(window).height());
-	};
-	heightDetect();
-	$(window).resize(function() {
-		heightDetect();
-	});
+    function heightDetect() {
+        $(".main_head").css("height", $(window).height());
+    };
+    heightDetect();
+    $(window).resize(function () {
+        heightDetect();
+    });
 
-	$(".toggle_mnu").click(function() {
-		$(".sandwich").toggleClass("active");
-	});
+    $(".toggle_mnu").click(function () {
+        $(".sandwich").toggleClass("active");
+    });
 
-	$(".top_mnu ul a").click(function() {
-		$(".top_mnu").fadeOut(600);
-		$(".sandwich").toggleClass("active");
-		$(".top_text").css("opacity", "1");
-	}).append("<span>");
+    $(".top_mnu ul a").click(function () {
+        $(".top_mnu").fadeOut(600);
+        $(".sandwich").toggleClass("active");
+        $(".top_text").css("opacity", "1");
+    }).append("<span>");
 
-	$(".toggle_mnu").click(function() {
-		if ($(".top_mnu").is(":visible")) {
-			$(".top_text").css("opacity", "1");
-			$(".top_mnu").fadeOut(600);
-			$(".top_mnu li a").removeClass("fadeInUp animated");
-		} else {
-			$(".top_text").css("opacity", ".1");
-			$(".top_mnu").fadeIn(600);
-			$(".top_mnu li a").addClass("fadeInUp animated");
-		};
-	});
+    $(".toggle_mnu").click(function () {
+        if ($(".top_mnu").is(":visible")) {
+            $(".top_text").css("opacity", "1");
+            $(".top_mnu").fadeOut(600);
+            $(".top_mnu li a").removeClass("fadeInUp animated");
+        } else {
+            $(".top_text").css("opacity", ".1");
+            $(".top_mnu").fadeIn(600);
+            $(".top_mnu li a").addClass("fadeInUp animated");
+        }
+        ;
+    });
 
-	$("input, select, textarea").jqBootstrapValidation();
+    //Аякс отправка форм
+    //Документация: http://api.jquery.com/jquery.ajax/
+    $("#callback").submit(function () {
+        $.ajax({
+            type: "GET",
+            url: "",
+            data: $("#callback").serialize()
+        }).done(function () {
+            alert("Сообщение отправлено!");
+            setTimeout(function () {
+                $.fancybox.close();
+            }, 1000);
+        });
+        return false;
+    });
 
-	$(".top_mnu ul a").mPageScroll2id();
+    $("input, select, textarea").jqBootstrapValidation();
+    $(".top_mnu ul a").mPageScroll2id();
 
 });
 
 // Загружает анимацию на главной странице
-$(window).load(function() {
+$(window).load(function () {
 
-	$(".loader_inner").delay(600).fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
+    $(".loader_inner").delay(600).fadeOut();
+    $(".loader").delay(400).fadeOut("slow");
 
-	$(".top_text h1").animated("fadeInDown", "fadeOutUp");
-	$(".top_text p").animated("fadeInUp", "fadeOutDown");
+    $(".top_text h1").animated("fadeInDown", "fadeOutUp");
+    $(".top_text p").animated("fadeInUp", "fadeOutDown");
 
 }); 
