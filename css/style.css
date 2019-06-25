@@ -14,7 +14,7 @@ body {
 
 html,
 body {
-    height: 100%;
+    height: auto;
 }
 
 a img {
@@ -25,7 +25,7 @@ a img {
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
     max-width: 1000px;
     margin: auto;
 }
@@ -42,15 +42,6 @@ a img {
     margin-top: 10px;
     flex-direction: column;
 }
-
-/*.header__logo {
-    margin-left: 30px;
-}*/
-
-/*.header__logo-image {
-    max-width: 60px;
-    width: 100%;
-}*/
 
 .header__menu {
     width: 100%;
@@ -146,16 +137,10 @@ a img {
     width: 100%;
     position: relative;
     max-width: 210px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 20px 10px;
     border: 1px solid #fff;
     box-shadow: -20px 25px 10px rgba(0,0,0,0.5);
     height: 297px;
-    animation: liftDown 0.5s forwards ease-in-out;
-}
-
-.product__view:hover {
-    animation: liftIn 0.5s forwards ease-in-out;
 }
 
 .product__link {
@@ -309,21 +294,21 @@ a img {
 }
 
 @keyframes liftIn {
-    from { margin-top: 0px; }
+    from { margin-top: 0; }
     to { margin-top: -30px; }
 }
 
 @-webkit-keyframes liftIn {
-    from { margin-top: 0px; }
+    from { margin-top: 0; }
     to { margin-top: -30px; }
 }
 
 @keyframes liftDown {
     from { margin-top: -30px; }
-    to { margin-top: 0px; }
+    to { margin-top: 0; }
 }
 
 @-webkit-keyframes liftDown {
     from { margin-top: -30px; }
-    to { margin-top: 0px; }
+    to { margin-top: 0; }
 }

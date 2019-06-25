@@ -1,9 +1,16 @@
 $(document).ready(function () {
 
-    //*Новое видео
-    $(function () {
+    var is_mobile = false;
+
+    if( $('.player').css('display')=='none') {
+        is_mobile = true;
+    }
+    if (is_mobile == true) {
+        $('.big-background').addClass('big-background-default-image');
+    }else{
         $(".player").mb_YTPlayer();
-    });
+    }
+
 
     $("#portfolio_grid").mixItUp();
 

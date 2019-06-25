@@ -1,15 +1,12 @@
 .preloader {
     position: fixed;
-    
-    height: 100%;
-    
-height: 60px;
-  width: 60px;
-  margin-top: -80px;
-  margin-left: -30px;
-  left: 70%;
-  top: 70%;
-  position: absolute;
+    height: 60px;
+    width: 60px;
+    margin-top: -80px;
+    margin-left: -30px;
+    left: 70%;
+    top: 70%;
+    position: absolute;
 }
 
 .spin {
@@ -38,10 +35,19 @@ height: 60px;
     border-radius: 60%;
 }
 
-@keyframes spin { 100% {transform:rotate(360deg);} }
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes antispin {
-  from {transform: rotate}
-  to {transform: rotate(-360deg);}
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(-360deg);
+    }
 }
 
 .preloader svg {

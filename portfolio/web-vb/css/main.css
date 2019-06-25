@@ -5,7 +5,9 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -183,6 +185,10 @@ svg path {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg); }
+
+.skull-top, .skull-bottom {
+  display: none;
+}
 
 .top_mnu {
   position: fixed;
